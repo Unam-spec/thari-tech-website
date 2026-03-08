@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "../../assets/logo.jpg";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,8 +11,7 @@ export function Header() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <a href="#" className="flex items-center gap-3">
-              <img src="/logo.jpg" alt="Thari Tech" className="h-10 w-auto" />
-              <p>Logo test</p>
+              <img src={logoImage} alt="Thari Tech" className="h-10 w-auto" />
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-8">

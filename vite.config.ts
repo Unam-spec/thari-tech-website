@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/thari-tech-website/",
   plugins: [react()],
+  base: "/thari-tech-website/", // This must match your GitHub repo name
 });

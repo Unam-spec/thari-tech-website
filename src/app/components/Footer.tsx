@@ -1,4 +1,5 @@
 import { Linkedin, Instagram } from "lucide-react";
+import logoImage from "../../assets/logo.jpg";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <img
-              src="/logo.jpg"
+              src={logoImage}
               alt="Thari Tech"
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
@@ -79,7 +80,7 @@ export function Footer() {
         </div>
         <div className="mt-8 flex justify-center">
           <div className="bg-white rounded-lg p-4 shadow-lg">
-            <img src="/logo.jpg" alt="Thari Tech" className="h-12 w-auto" />
+            <img src={logoImage} alt="Thari Tech" className="h-12 w-auto" />
           </div>
         </div>
       </div>
