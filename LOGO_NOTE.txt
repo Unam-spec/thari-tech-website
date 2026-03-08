@@ -1,0 +1,3 @@
+Place your logo here as logo.png
+The logo.jpg included is a fallback from the WhatsApp image.
+For best results use a transparent PNG version of the Thari Tech logo.
