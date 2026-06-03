@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tharitech.co.za/sitemap.xml
