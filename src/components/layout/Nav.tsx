@@ -5,9 +5,9 @@ import { Button } from "../primitives/Button";
 
 const links = [
   { href: "#problem", label: "Why" },
-  { href: "#infrastructure", label: "Infrastructure" },
-  { href: "#process", label: "Process" },
-  { href: "#pricing", label: "Engagements" },
+  { href: "#infrastructure", label: "What it does" },
+  { href: "#how", label: "How it works" },
+  { href: "#pricing", label: "Plans" },
 ];
 
 export function Nav() {
@@ -54,7 +54,7 @@ export function Nav() {
               variant="solid"
               className="hidden px-5 py-2.5 text-[0.85rem] sm:inline-flex"
             >
-              Book an audit
+              Book a walkthrough
             </Button>
             <button
               className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full md:hidden"

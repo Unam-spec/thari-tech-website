@@ -21,11 +21,11 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   // {
-  //   quote: "Thari Tech rebuilt our outbound as infrastructure. It books meetings while we sleep.",
-  //   name: "Jane Okafor",
-  //   role: "VP Revenue",
-  //   company: "Acme RevOps",
-  //   metric: "3.4× booked calls",
+  //   quote: "We stopped missing after-hours enquiries overnight. It books appointments while we sleep.",
+  //   name: "Lerato M.",
+  //   role: "Owner",
+  //   company: "Sunrise Dental",
+  //   metric: "0 missed leads",
   // },
 ];
 

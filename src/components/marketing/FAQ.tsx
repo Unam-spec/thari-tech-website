@@ -3,28 +3,32 @@ import { Button } from "../primitives/Button";
 
 const faqs: { q: string; a: string }[] = [
   {
-    q: "What exactly do you build?",
-    a: "AI-driven revenue infrastructure: an Apollo-to-Clay data pipeline, autonomous Email and LinkedIn agents, and a custom AI-native CRM, all wired into one closed loop. You own the system; it runs without you.",
+    q: "What channels does it work on?",
+    a: "WhatsApp and your website to start. On the Convert and Managed plans it runs across your main channels at once, so wherever a customer reaches out, they get an instant reply.",
   },
   {
-    q: "How is this different from hiring an SDR or an agency?",
-    a: "An SDR or agency adds manual labor that stops when they stop. We engineer infrastructure that sources, qualifies, messages, and books on its own, 24/7, and keeps your CRM accurate automatically. It compounds instead of churning.",
+    q: "How fast does it reply?",
+    a: "Within seconds, 24/7, including nights, weekends, and the moments you're busy with a customer. No enquiry waits for you to be free.",
   },
   {
-    q: "How long until it's live?",
-    a: "Most builds reach a live pipeline in about three weeks after the audit: data engine first, then the autonomous agents, then the CRM wiring and tuning to your ICP.",
+    q: "Will it sound like a robot?",
+    a: "No. We set it up to ask your questions in your tone, so enquiries feel handled, not bounced to a generic bot. Anything it can't handle gets flagged straight to you.",
   },
   {
-    q: "Do I need to use a specific CRM?",
-    a: "No. We deploy and wire a custom AI-native CRM as part of the engagement, or integrate with the stack you already run. The point is one source of truth that updates itself.",
+    q: "Do I need to change my tools?",
+    a: "No. It plugs into the WhatsApp number, website, and calendar you already use. Nothing to rip out and relearn.",
   },
   {
-    q: "What does an engagement cost?",
-    a: "Engagements start at $1,500/mo for the data engine and scale to $5,000+/mo for the full closed-loop CRM infrastructure. One closed enterprise account typically covers the year.",
+    q: "How long does setup take?",
+    a: "We build and wire the whole thing for you. Most setups are live within days of your walkthrough, not weeks.",
   },
   {
-    q: "What happens in the infrastructure audit?",
-    a: "A focused 30-minute working session. We map your current pipeline, pinpoint where revenue leaks between your tools and your CRM, and show you exactly what the autonomous build would replace. No pitch deck.",
+    q: "What does it cost?",
+    a: "A one-time setup from R6,000 plus a monthly fee from R1,800. Plans scale up as you add smart qualifying, auto-booking, and managed follow-ups.",
+  },
+  {
+    q: "What happens in the free walkthrough?",
+    a: "A 15-minute call where we show the system handling your kind of enquiries and map out exactly what your setup would look like. No pressure, no pitch deck.",
   },
 ];
 
@@ -52,11 +56,11 @@ export function FAQ() {
             Answers before you ask.
           </h2>
           <p className="mt-5 max-w-sm text-[1.05rem] leading-relaxed text-ink-soft">
-            Still deciding whether autonomous infrastructure fits your team? Book
-            the audit and we'll map it against your actual pipeline.
+            Still deciding whether this fits your business? Book a free
+            walkthrough and we'll show it handling your kind of enquiries.
           </p>
           <Button href="#contact" variant="solid" className="mt-7">
-            Book an infrastructure audit
+            Book a free walkthrough
           </Button>
         </div>
 
