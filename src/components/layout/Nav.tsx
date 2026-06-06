@@ -4,10 +4,10 @@ import { MobileMenu } from "./MobileMenu";
 import { Button } from "../primitives/Button";
 
 const links = [
+  { href: "#problem", label: "Why" },
   { href: "#infrastructure", label: "Infrastructure" },
-  { href: "#pipeline", label: "How it runs" },
+  { href: "#process", label: "Process" },
   { href: "#pricing", label: "Engagements" },
-  { href: "/platform", label: "Command center" },
 ];
 
 export function Nav() {
@@ -23,15 +23,15 @@ export function Nav() {
 
   return (
     <>
-      <header
-        className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
-          scrolled
-            ? "border-line bg-ink-950/80 backdrop-blur-glass"
-            : "border-transparent bg-transparent"
-        }`}
-      >
-        <nav className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between px-5 sm:px-8 lg:px-16">
-          <a href="/" aria-label="Thari-Tech home">
+      <header className="sticky top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
+        <nav
+          className={`mx-auto flex h-14 w-full max-w-[1180px] items-center justify-between rounded-pill pl-5 pr-2.5 transition-all duration-300 ease-ease ${
+            scrolled
+              ? "border border-line bg-paper/80 shadow-soft backdrop-blur-glass"
+              : "border border-transparent bg-transparent"
+          }`}
+        >
+          <a href="/" aria-label="Thari Tech home">
             <Logo />
           </a>
 
@@ -40,7 +40,7 @@ export function Nav() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="font-sans text-[0.88rem] text-fog-muted transition-colors duration-200 hover:text-fog"
+                  className="font-sans text-[0.9rem] font-medium text-ink-soft transition-colors duration-200 hover:text-ink"
                 >
                   {l.label}
                 </a>
@@ -48,22 +48,21 @@ export function Nav() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <Button
               href="#contact"
-              variant="cyan"
-              className="hidden px-5 py-2 text-[0.85rem] sm:inline-flex"
+              variant="solid"
+              className="hidden px-5 py-2.5 text-[0.85rem] sm:inline-flex"
             >
               Book an audit
             </Button>
             <button
-              className="flex h-9 w-9 flex-col items-center justify-center gap-[5px] md:hidden"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full md:hidden"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
             >
-              <span className="h-px w-5 bg-fog" />
-              <span className="h-px w-5 bg-fog" />
-              <span className="h-px w-5 bg-fog" />
+              <span className="h-0.5 w-5 rounded bg-ink" />
+              <span className="h-0.5 w-5 rounded bg-ink" />
             </button>
           </div>
         </nav>

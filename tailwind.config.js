@@ -4,51 +4,50 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Readable charcoal-gray ramp with a faint cool tint (never flat black)
+        // Editorial Light — warm bone canvas, ink type, electric indigo accent
+        paper: {
+          DEFAULT: "#F4F1EA", // page
+          soft: "#EDE9DF", // alternating sections
+          deep: "#E6E1D4", // deepest band
+        },
+        panel: {
+          DEFAULT: "#FFFFFF", // cards / elevated surfaces
+          soft: "#FBFAF6",
+        },
         ink: {
-          950: "#15171C",
-          900: "#191C22",
-          800: "#1F232B",
-          700: "#282D37",
-          600: "#343A45",
+          DEFAULT: "#14130F", // headlines
+          soft: "#4B473E", // body
+          faint: "#8C8678", // muted / eyebrow / captions
         },
-        line: "rgba(148,163,184,0.10)",
-        "line-strong": "rgba(148,163,184,0.18)",
-        fog: {
-          DEFAULT: "#C7D0E0",
-          muted: "rgba(199,208,224,0.55)",
-          faint: "rgba(199,208,224,0.30)",
+        accent: {
+          DEFAULT: "#4F3CF0", // electric indigo
+          deep: "#3526C2",
+          bright: "#6E5BFF",
+          soft: "rgba(79,60,240,0.08)",
         },
-        // Electric cyan — primary accent (digital network / nodes)
-        cyan: {
-          DEFAULT: "#22E0D6",
-          bright: "#5FF6EE",
-          deep: "#0FB5AC",
-        },
-        // Amber — rare premium / value highlight only
-        amber: {
-          DEFAULT: "#F5A524",
-          deep: "#C97E0F",
-        },
+        line: "rgba(20,19,15,0.10)",
+        "line-strong": "rgba(20,19,15,0.18)",
       },
       fontFamily: {
-        display: ['"Space Grotesk"', "ui-sans-serif", "sans-serif"],
-        sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ['"Fraunces"', "ui-serif", "Georgia", "serif"],
+        sans: ['"Hanken Grotesk"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         tightest: "-0.04em",
-        display: "-0.03em",
+        display: "-0.025em",
       },
       borderRadius: {
-        card: "14px",
+        card: "18px",
+        xl2: "28px",
         pill: "100px",
       },
       backdropBlur: {
-        glass: "14px",
+        glass: "16px",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(34,224,214,0.18), 0 0 40px -12px rgba(34,224,214,0.25)",
-        "glow-amber": "0 0 0 1px rgba(245,165,36,0.25), 0 0 50px -10px rgba(245,165,36,0.30)",
+        soft: "0 1px 2px rgba(20,19,15,0.04), 0 10px 30px -16px rgba(20,19,15,0.18)",
+        lift: "0 28px 60px -28px rgba(20,19,15,0.30)",
+        accent: "0 14px 44px -14px rgba(79,60,240,0.42)",
       },
       transitionTimingFunction: {
         ease: "cubic-bezier(0.22, 1, 0.36, 1)",
@@ -62,19 +61,20 @@ export default {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "flow-dash": {
-          to: { strokeDashoffset: "-16" },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
-        ticker: {
-          "0%,100%": { opacity: "0.4" },
-          "50%": { opacity: "1" },
+        float: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       animation: {
         "pulse-dot": "pulse-dot 2s ease-in-out infinite",
         "fade-up": "fade-up 0.6s cubic-bezier(0.22,1,0.36,1) both",
-        "flow-dash": "flow-dash 1s linear infinite",
-        ticker: "ticker 1.6s ease-in-out infinite",
+        marquee: "marquee 38s linear infinite",
+        float: "float 6s ease-in-out infinite",
       },
     },
   },
