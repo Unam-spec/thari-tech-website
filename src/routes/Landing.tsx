@@ -7,7 +7,9 @@ import { Problem } from "../components/marketing/Problem";
 import { Services } from "../components/marketing/Services";
 import { PipelineDiagram } from "../components/marketing/PipelineDiagram";
 import { Process } from "../components/marketing/Process";
+import { Testimonials } from "../components/marketing/Testimonials";
 import { Pricing } from "../components/marketing/Pricing";
+import { FAQ } from "../components/marketing/FAQ";
 import { CTASection } from "../components/marketing/CTASection";
 
 /**
@@ -18,13 +20,15 @@ import { CTASection } from "../components/marketing/CTASection";
  *   4. Services        — split-screen explanation of the 3 infra layers
  *   5. PipelineDiagram — the self-driving engine, stage by stage
  *   6. Process         — how the engagement works (You → We → It)
- *   7. Pricing         — high-ticket RevOps tiers (Enterprise = primary)
- *   8. CTASection      — book an infrastructure audit
+ *   7. Testimonials    — client proof (self-hides until entries are added)
+ *   8. Pricing         — high-ticket RevOps tiers (Enterprise = primary)
+ *   9. FAQ             — objection handling + FAQPage schema
+ *  10. CTASection      — book an infrastructure audit
  */
 export function Landing() {
   useReveal();
   return (
-    <div className="min-h-screen bg-gradient-to-b from-ink-950 via-ink-900 to-ink-950">
+    <div className="grain min-h-screen bg-paper">
       <Nav />
       <main>
         <Hero />
@@ -33,7 +37,9 @@ export function Landing() {
         <Services />
         <PipelineDiagram />
         <Process />
+        <Testimonials />
         <Pricing />
+        <FAQ />
         <CTASection />
       </main>
       <Footer />

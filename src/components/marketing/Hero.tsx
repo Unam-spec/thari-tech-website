@@ -1,63 +1,58 @@
+import { Suspense, lazy } from "react";
 import { Button } from "../primitives/Button";
-import { PipelineNodes } from "./PipelineNodes";
+
+// Code-split the WebGL scene so three.js stays out of the initial bundle.
+const Crystal = lazy(() => import("../three/Crystal"));
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden px-5 pb-20 pt-16 sm:px-8 md:pb-28 md:pt-24 lg:px-16">
-      {/* Cyan light source — radial, low opacity, behind content (not a fill gradient) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-[10%] -top-[20%] h-[620px] w-[620px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(34,224,214,0.10) 0%, transparent 65%)",
-        }}
-      />
-      <div aria-hidden className="grid-bg pointer-events-none absolute inset-0 opacity-40" />
-
-      <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        {/* Left — copy */}
-        <div className="max-w-xl">
-          <div className="mb-7 inline-flex items-center gap-2 rounded-pill border border-cyan/25 bg-cyan/5 px-3.5 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse-dot" />
-            <span className="font-display text-[0.68rem] uppercase tracking-[0.18em] text-cyan">
+    <section className="relative overflow-hidden px-5 pb-16 pt-10 sm:px-8 md:pb-24 md:pt-16 lg:px-16">
+      <div className="relative mx-auto grid w-full max-w-[1180px] items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        {/* Left — editorial type */}
+        <div className="relative z-10 max-w-xl">
+          <div className="mb-8 inline-flex items-center gap-2.5 rounded-pill border border-line bg-panel/60 px-3.5 py-1.5 shadow-soft">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
+            <span className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-ink-soft">
               Autonomous revenue infrastructure
             </span>
           </div>
 
-          <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] font-bold leading-[1.02] tracking-display text-fog">
-            Qualify leads at 2&nbsp;AM.
+          <h1 className="font-display text-[clamp(2.8rem,6.4vw,5rem)] font-semibold leading-[0.98] tracking-display text-ink">
+            Qualify leads
             <br />
-            <span className="text-cyan">Close them by 9.</span>
+            at 2&nbsp;AM.{" "}
+            <span className="italic text-accent">Close</span>
+            <br />
+            them by 9.
           </h1>
 
-          <p className="mt-6 max-w-md text-[1.02rem] leading-relaxed text-fog-muted">
-            Thari-Tech builds self-driving revenue engines: an Apollo-to-Clay
-            data pipeline feeding autonomous Email & LinkedIn agents, wired
-            directly into a deep, AI-native CRM. Not campaigns. Infrastructure
-            that runs every hour you don't.
+          <p className="mt-7 max-w-md text-[1.05rem] leading-relaxed text-ink-soft">
+            Thari Tech builds self-driving revenue engines: an Apollo-to-Clay
+            data pipeline feeding autonomous Email & LinkedIn agents, wired into
+            a deep, AI-native CRM. Not campaigns. Infrastructure that runs every
+            hour you don't.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="#contact" variant="amber">
+            <Button href="#contact" variant="solid">
               Book an infrastructure audit
             </Button>
-            <Button href="#pipeline" variant="ghost">
+            <Button href="#process" variant="outline">
               See how it runs
             </Button>
           </div>
 
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-8">
+          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-8">
             {[
               ["24/7", "Autonomous uptime"],
               ["3.4×", "Pipeline velocity"],
-              ["1", "Unified source of truth"],
+              ["1", "Source of truth"],
             ].map(([num, label]) => (
               <div key={label}>
-                <dd className="font-display text-[1.7rem] font-bold leading-none text-fog">
+                <dd className="font-display text-[2rem] font-semibold leading-none text-ink">
                   {num}
                 </dd>
-                <dt className="mt-1.5 text-[0.72rem] leading-snug text-fog-faint">
+                <dt className="mt-2 text-[0.74rem] leading-snug text-ink-faint">
                   {label}
                 </dt>
               </div>
@@ -65,9 +60,26 @@ export function Hero() {
           </dl>
         </div>
 
-        {/* Right — live pipeline node visual */}
-        <div className="relative">
-          <PipelineNodes />
+        {/* Right — 3D crystal */}
+        <div className="relative h-[340px] sm:h-[440px] lg:h-[560px]">
+          {/* soft accent light source behind the crystal */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 -z-10"
+            style={{
+              background:
+                "radial-gradient(circle at 55% 45%, rgba(79,60,240,0.18), transparent 62%)",
+            }}
+          />
+          <Suspense
+            fallback={
+              <div className="flex h-full items-center justify-center">
+                <div className="h-48 w-48 animate-float rounded-full bg-gradient-to-br from-accent/30 to-accent-bright/10 blur-2xl" />
+              </div>
+            }
+          >
+            <Crystal />
+          </Suspense>
         </div>
       </div>
     </section>

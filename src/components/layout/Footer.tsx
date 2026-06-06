@@ -2,14 +2,14 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line px-5 py-12 sm:px-8 lg:px-16">
-      <div className="mx-auto w-full max-w-[1200px]">
+    <footer className="border-t border-line bg-paper-soft px-5 py-14 sm:px-8 lg:px-16">
+      <div className="mx-auto w-full max-w-[1180px]">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-xs">
             <Logo />
-            <p className="mt-4 text-[0.85rem] leading-relaxed text-fog-muted">
-              Autonomous AI CRM infrastructure for B2B revenue teams. We build
-              the pipeline that runs itself.
+            <p className="mt-4 text-[0.9rem] leading-relaxed text-ink-soft">
+              Autonomous AI revenue infrastructure for B2B teams. We build the
+              pipeline that runs itself.
             </p>
           </div>
 
@@ -25,9 +25,9 @@ export function Footer() {
             <FooterCol
               title="Company"
               items={[
-                ["How it runs", "#pipeline"],
+                ["Why", "#problem"],
+                ["Process", "#process"],
                 ["Engagements", "#pricing"],
-                ["Command center", "/platform"],
               ]}
             />
             <FooterCol
@@ -41,10 +41,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-[0.75rem] text-fog-faint sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 Thari-Tech (Pty) Ltd · All rights reserved</span>
+        <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 text-[0.78rem] text-ink-faint sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 Thari Tech (Pty) Ltd. All rights reserved.</span>
           <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse-dot" />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
             Infrastructure operational
           </span>
         </div>
@@ -62,7 +62,7 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="mb-3 font-display text-[0.7rem] uppercase tracking-[0.18em] text-fog-faint">
+      <h4 className="mb-3 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-ink-faint">
         {title}
       </h4>
       <ul className="space-y-2.5">
@@ -70,7 +70,7 @@ function FooterCol({
           <li key={label}>
             <a
               href={href}
-              className="text-[0.82rem] text-fog-muted transition-colors duration-200 hover:text-cyan"
+              className="text-[0.85rem] text-ink-soft transition-colors duration-200 hover:text-accent"
             >
               {label}
             </a>

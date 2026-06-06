@@ -2,22 +2,21 @@ import type { ReactNode } from "react";
 
 interface SectionProps {
   id?: string;
-  eyebrow?: string;
   className?: string;
   children: ReactNode;
 }
 
 /**
- * Consistent section padding + max width. Layouts inside are intentionally
- * asymmetric — this only owns rhythm, not column structure.
+ * Owns vertical rhythm + max width only. Generous editorial whitespace.
+ * Layouts inside are intentionally varied.
  */
 export function Section({ id, className = "", children }: SectionProps) {
   return (
     <section
       id={id}
-      className={`px-5 py-20 sm:px-8 md:py-28 lg:px-16 ${className}`}
+      className={`px-5 py-24 sm:px-8 md:py-32 lg:px-16 ${className}`}
     >
-      <div className="mx-auto w-full max-w-[1200px]">{children}</div>
+      <div className="mx-auto w-full max-w-[1180px]">{children}</div>
     </section>
   );
 }
@@ -25,7 +24,7 @@ export function Section({ id, className = "", children }: SectionProps) {
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <span className="eyebrow">
-      <span className="h-px w-6 bg-cyan/60" />
+      <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
       {children}
     </span>
   );
