@@ -40,7 +40,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
 
       <div className="p-6">
         <Button href="#contact" variant="solid" onClick={onClose} className="w-full">
-          Book an infrastructure audit
+          Book a free walkthrough
         </Button>
       </div>
     </div>

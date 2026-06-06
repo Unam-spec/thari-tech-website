@@ -1,8 +1,8 @@
 const metrics = [
-  ["$0", "Ad spend in the pipeline"],
-  ["18 min", "Median lead response, autonomously"],
-  ["92%", "Of qualified leads land in your CRM enriched"],
-  ["3.4×", "More booked calls per rep, no new headcount"],
+  ["24/7", "Answering, even at 2am"],
+  ["<2 min", "To first reply, every time"],
+  ["100%", "Of enquiries get a response"],
+  ["0", "Extra staff to hire"],
 ];
 
 export function ProofStrip() {

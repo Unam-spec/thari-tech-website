@@ -2,7 +2,7 @@ import { Section, Eyebrow } from "../primitives/Section";
 
 type Step = {
   id: string;
-  actor: "You" | "We" | "It";
+  tag: "Customer" | "System" | "You";
   title: string;
   desc: string;
   stat: string;
@@ -13,42 +13,42 @@ type Step = {
 const steps: Step[] = [
   {
     id: "01",
-    actor: "You",
-    title: "Book the audit",
-    desc: "A 30-minute working session. You walk us through the current pipeline; we map exactly where revenue leaks between your tools and your CRM.",
-    stat: "30 min",
-    statLabel: "No pitch deck",
+    tag: "Customer",
+    title: "They reach out",
+    desc: "A customer messages you on WhatsApp or your website, at any hour, on any day.",
+    stat: "Any hour",
+    statLabel: "Day or night",
   },
   {
     id: "02",
-    actor: "We",
-    title: "Build the stack",
-    desc: "Data engine, autonomous agents, and CRM wiring, engineered and tuned to your ICP. You approve the plan; we ship the infrastructure.",
-    stat: "~3 wks",
-    statLabel: "To live pipeline",
+    tag: "System",
+    title: "It answers & qualifies",
+    desc: "Our system replies instantly, asks the right questions, and filters the serious buyers from the browsers.",
+    stat: "Seconds",
+    statLabel: "To first reply",
   },
   {
     id: "03",
-    actor: "It",
-    title: "Runs without you",
-    desc: "The pipeline sources, qualifies, messages, and books on its own, writing every signal back to one CRM. You review outcomes, not tasks.",
-    stat: "24/7",
-    statLabel: "Autonomous",
+    tag: "You",
+    title: "They're booked in",
+    desc: "The qualified ones land straight in your calendar while you get on with the work.",
+    stat: "Hands-free",
+    statLabel: "Booked for you",
     payoff: true,
   },
 ];
 
 export function Process() {
   return (
-    <Section id="process" className="reveal bg-paper-soft">
+    <Section id="how" className="reveal bg-paper-soft">
       <div className="max-w-2xl">
-        <Eyebrow>How we work</Eyebrow>
+        <Eyebrow>How it works</Eyebrow>
         <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.3rem)] font-semibold leading-[1.05] tracking-display text-ink">
-          Three moves. Then it runs without you.
+          Three steps. Zero missed leads.
         </h2>
         <p className="mt-5 text-[1.05rem] leading-relaxed text-ink-soft">
-          No six-month transformation project. We audit, we build, and the
-          infrastructure takes over, usually inside a few weeks.
+          From the first message to a confirmed booking, it runs on its own.
+          You only show up for the part that matters: the customer.
         </p>
       </div>
 
@@ -76,7 +76,7 @@ export function Process() {
                   : "border-line-strong text-ink-soft"
               }`}
             >
-              {s.actor}
+              {s.tag}
             </span>
 
             <h3 className="mt-4 font-display text-[1.4rem] font-semibold leading-tight text-ink">

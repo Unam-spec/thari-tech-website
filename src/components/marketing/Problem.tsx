@@ -2,16 +2,16 @@ import { Section, Eyebrow } from "../primitives/Section";
 import { WordReveal } from "./WordReveal";
 
 /**
- * Pain-agitation wall — the frustrations every revenue team voices on an audit
- * call, as a masonry of overheard lines. Sets up Services.
+ * Pain-agitation wall — the missed-lead frustrations business owners voice,
+ * as a masonry of overheard lines. Sets up Services.
  */
 const gripes: { quote: string; role: string }[] = [
-  { quote: "Our SDRs spend half their day copy-pasting leads into the CRM.", role: "Head of Sales" },
-  { quote: "By the time anyone follows up, the lead's already gone cold.", role: "RevOps lead" },
-  { quote: "Half the “qualified” leads aren't even close to our ICP.", role: "Demand gen" },
-  { quote: "Every rep prospects differently. Nothing about it is reproducible.", role: "VP Sales" },
-  { quote: "The CRM is a graveyard. Nobody updates it after the first call.", role: "Founder" },
-  { quote: "We pay for Apollo, Clay, and three tools that don't talk to each other.", role: "Ops manager" },
+  { quote: "Someone messaged us at 9pm. By the time we saw it, they'd booked elsewhere.", role: "Salon owner" },
+  { quote: "Half my WhatsApp enquiries never get a reply during a busy day.", role: "Plumber" },
+  { quote: "We answer everyone, then waste hours on people who were never going to buy.", role: "Studio manager" },
+  { quote: "Leads come in over the weekend and just sit there until Monday.", role: "Estate agent" },
+  { quote: "I'm replying to enquiries between jobs instead of doing the actual work.", role: "Contractor" },
+  { quote: "We get the enquiry, but nobody ever follows up to actually book it.", role: "Clinic owner" },
 ];
 
 export function Problem() {
@@ -20,11 +20,11 @@ export function Problem() {
       <div className="max-w-3xl">
         <Eyebrow>The real problem</Eyebrow>
         <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.3rem)] font-semibold leading-[1.05] tracking-display text-ink">
-          Your pipeline isn't broken.
-          <br className="hidden sm:block" /> The work around it is.
+          The lead was ready.
+          <br className="hidden sm:block" /> You just weren't there.
         </h2>
         <WordReveal
-          text="Talk to any revenue team and the same lines come up. Every one is a data, timing, or routing problem, the exact things software should have automated years ago."
+          text="Every business hears the same thing. An enquiry came in after hours, on a busy day, or over the weekend, and by the time anyone replied, the customer had moved on. The interest was real. The timing just beat you."
           className="mt-6 max-w-2xl font-display text-[clamp(1.15rem,2.2vw,1.6rem)] font-normal leading-snug tracking-display text-ink"
         />
       </div>
@@ -56,14 +56,14 @@ export function Problem() {
       {/* Pivot */}
       <div className="mt-10 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xl font-display text-[clamp(1.2rem,2.4vw,1.5rem)] font-medium leading-snug text-ink">
-          None of this needs another rep.{" "}
-          <span className="text-accent">It needs infrastructure.</span>
+          You don't need to hire more people.{" "}
+          <span className="text-accent">You need to be there first.</span>
         </p>
         <a
           href="#infrastructure"
           className="group inline-flex items-center gap-2 whitespace-nowrap font-sans text-[0.92rem] font-semibold text-accent transition-colors duration-200 hover:text-accent-deep"
         >
-          See what we automate
+          See what it does
           <span className="transition-transform duration-200 ease-ease group-hover:translate-x-1">
             &rarr;
           </span>

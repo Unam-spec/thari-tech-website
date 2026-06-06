@@ -1,9 +1,9 @@
-import { Database, Bot, Workflow, ArrowUpRight } from "lucide-react";
+import { Zap, Filter, CalendarCheck, ArrowUpRight } from "lucide-react";
 import { Section, Eyebrow } from "../primitives/Section";
 
 type Pillar = {
   index: string;
-  icon: typeof Database;
+  icon: typeof Zap;
   channel: string;
   title: string;
   desc: string;
@@ -14,41 +14,41 @@ type Pillar = {
 const pillars: Pillar[] = [
   {
     index: "01",
-    icon: Database,
-    channel: "Layer 01 — Data",
-    title: "The Apollo-to-Clay data engine",
-    desc: "Every autonomous system is only as good as the data underneath it. We engineer a continuous pipeline from Apollo into Clay, enriching, scoring, and AI-personalizing every record against a modeled ICP before a single message goes out.",
+    icon: Zap,
+    channel: "Step 01 — Respond",
+    title: "Instant replies, day or night",
+    desc: "The moment someone messages you on WhatsApp or your website, the system answers, in seconds, not hours. No enquiry sits unread, no after-hours message goes cold, and no customer is left waiting while you're busy or asleep.",
     specs: [
-      "Apollo-to-Clay pipeline construction",
-      "Target ICP modeling",
-      "AI-personalized enrichment",
-      "Automated data scraping & refresh",
+      "Replies in seconds, 24/7",
+      "Works on WhatsApp and your website",
+      "Catches after-hours and weekend enquiries",
+      "Every message gets answered",
     ],
   },
   {
     index: "02",
-    icon: Bot,
-    channel: "Layer 02 — Outreach",
-    title: "Autonomous messaging agents",
-    desc: "AI agents run Email and LinkedIn outreach end to end: opening, personalizing at the individual level, handling objections, and booking pre-qualified meetings straight to your reps' calendars. No campaigns to babysit.",
+    icon: Filter,
+    channel: "Step 02 — Qualify",
+    title: "Sorts serious buyers from time-wasters",
+    desc: "The system asks the right questions up front, the way your best team member would, and figures out who's a real, ready-to-book customer. You stop spending hours on enquiries that were never going to buy.",
     specs: [
-      "Email & LinkedIn sender integration",
-      "Autonomous objection handling",
-      "Adaptive multi-touch sequencing",
-      "Pre-qualified calendar bookings",
+      "Asks your qualifying questions naturally",
+      "Filters serious buyers from browsers",
+      "Captures the details you need",
+      "Sounds like your business, not a robot",
     ],
   },
   {
     index: "03",
-    icon: Workflow,
-    channel: "Layer 03 — Closed loop",
-    title: "Self-driving CRM",
-    desc: "We deploy a custom AI-native CRM and wire intelligence directly into it. Conversations, scores, and outcomes sync in real time, so stages, owners, and next-actions update themselves. The CRM stops being a record-keeper and becomes the revenue department.",
+    icon: CalendarCheck,
+    channel: "Step 03 — Book",
+    title: "Books them straight into your calendar",
+    desc: "Qualified customers get offered your real availability and book themselves in, no back-and-forth. You just see confirmed appointments appear while you get on with the work.",
     specs: [
-      "Custom CRM deployment",
-      "Direct AI-to-CRM API syncing",
-      "Self-updating stages & next-actions",
-      "Closed-loop revenue reporting",
+      "Auto-booking into your live calendar",
+      "No back-and-forth scheduling",
+      "Automated follow-ups on higher plans",
+      "Confirmed bookings, hands-free",
     ],
     flagship: true,
   },
@@ -58,14 +58,14 @@ export function Services() {
   return (
     <Section id="infrastructure" className="reveal bg-paper-soft">
       <div className="max-w-2xl">
-        <Eyebrow>Infrastructure</Eyebrow>
+        <Eyebrow>What it does</Eyebrow>
         <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.3rem)] font-semibold leading-[1.05] tracking-display text-ink">
-          Three layers. One self-driving pipeline.
+          Reply. Qualify. Book. Automatically.
         </h2>
         <p className="mt-5 text-[1.05rem] leading-relaxed text-ink-soft">
-          We don't sell a tool or a freelancer with a script. We engineer the
-          entire stack, from data to outreach to CRM, as AI-driven personalized
-          infrastructure that runs every hour you don't.
+          We set up an always-on system that handles your incoming enquiries
+          end to end, so every lead gets an instant answer and the good ones
+          land in your calendar, without you lifting a finger.
         </p>
       </div>
 

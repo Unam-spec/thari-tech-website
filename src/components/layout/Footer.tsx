@@ -8,32 +8,32 @@ export function Footer() {
           <div className="max-w-xs">
             <Logo />
             <p className="mt-4 text-[0.9rem] leading-relaxed text-ink-soft">
-              Autonomous AI revenue infrastructure for B2B teams. We build the
-              pipeline that runs itself.
+              Always-on systems that reply to your enquiries instantly, qualify
+              them, and book them straight into your calendar.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:grid-cols-3">
             <FooterCol
-              title="Infrastructure"
+              title="What it does"
               items={[
-                ["Apollo-to-Clay data", "#infrastructure"],
-                ["Autonomous outreach", "#infrastructure"],
-                ["CRM AI integration", "#infrastructure"],
+                ["Instant replies", "#infrastructure"],
+                ["Smart qualifying", "#infrastructure"],
+                ["Auto-booking", "#infrastructure"],
               ]}
             />
             <FooterCol
               title="Company"
               items={[
                 ["Why", "#problem"],
-                ["Process", "#process"],
-                ["Engagements", "#pricing"],
+                ["How it works", "#how"],
+                ["Plans", "#pricing"],
               ]}
             />
             <FooterCol
               title="Contact"
               items={[
-                ["Book an audit", "#contact"],
+                ["Book a walkthrough", "#contact"],
                 ["tharitech.co.za", "#"],
                 ["tharitechptyltd@gmail.com", "mailto:tharitechptyltd@gmail.com"],
               ]}

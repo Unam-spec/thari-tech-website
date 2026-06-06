@@ -13,40 +13,39 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-2.5 rounded-pill border border-line bg-panel/60 px-3.5 py-1.5 shadow-soft">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
             <span className="font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-ink-soft">
-              Autonomous revenue infrastructure
+              Always-on lead capture
             </span>
           </div>
 
           <h1 className="font-display text-[clamp(2.8rem,6.4vw,5rem)] font-semibold leading-[0.98] tracking-display text-ink">
-            Qualify leads
+            Never miss
             <br />
-            at 2&nbsp;AM.{" "}
-            <span className="italic text-accent">Close</span>
+            another lead,{" "}
+            <span className="italic text-accent">even</span>
             <br />
-            them by 9.
+            at 2am.
           </h1>
 
           <p className="mt-7 max-w-md text-[1.05rem] leading-relaxed text-ink-soft">
-            Thari Tech builds self-driving revenue engines: an Apollo-to-Clay
-            data pipeline feeding autonomous Email & LinkedIn agents, wired into
-            a deep, AI-native CRM. Not campaigns. Infrastructure that runs every
-            hour you don't.
+            We set up always-on systems that reply to your enquiries instantly,
+            qualify them, and book them straight into your calendar. You close
+            more without hiring more.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button href="#contact" variant="solid">
-              Book an infrastructure audit
+              Book a free walkthrough
             </Button>
-            <Button href="#process" variant="outline">
-              See how it runs
+            <Button href="#how" variant="outline">
+              See how it works
             </Button>
           </div>
 
           <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-line pt-8">
             {[
-              ["24/7", "Autonomous uptime"],
-              ["3.4×", "Pipeline velocity"],
-              ["1", "Source of truth"],
+              ["24/7", "Always answering"],
+              ["<2 min", "To first reply"],
+              ["0", "New hires needed"],
             ].map(([num, label]) => (
               <div key={label}>
                 <dd className="font-display text-[2rem] font-semibold leading-none text-ink">

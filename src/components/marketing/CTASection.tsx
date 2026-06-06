@@ -20,11 +20,11 @@ export function CTASection() {
     const goal = String(f.get("goal") || "").trim();
     if (!name || !email) return;
 
-    const subject = encodeURIComponent(`Infrastructure audit request: ${company || name}`);
+    const subject = encodeURIComponent(`Walkthrough request: ${company || name}`);
     const body = encodeURIComponent(
-      `New audit request from the Thari Tech site\n\n` +
-        `Name: ${name}\nCompany: ${company || "N/A"}\nEmail: ${email}\n` +
-        `Current CRM/stack: ${stack || "N/A"}\nGoal: ${goal || "N/A"}`,
+      `New walkthrough request from the Thari Tech site\n\n` +
+        `Name: ${name}\nBusiness: ${company || "N/A"}\nEmail: ${email}\n` +
+        `Enquiries come in via: ${stack || "N/A"}\nWhat they get asked about: ${goal || "N/A"}`,
     );
     window.open(`mailto:tharitechptyltd@gmail.com?subject=${subject}&body=${body}`, "_blank");
     setSent(true);
@@ -46,19 +46,19 @@ export function CTASection() {
               Get started
             </span>
             <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.2rem)] font-semibold leading-[1.05] tracking-display text-white">
-              Book an infrastructure audit.
+              See it handle your leads.
             </h2>
             <p className="mt-5 max-w-md text-[1.02rem] leading-relaxed text-paper/75">
-              A 30-minute working session. We map your current pipeline, pinpoint
-              where revenue leaks between your tools and your CRM, and show you
-              exactly what the autonomous build would replace. No pitch deck.
+              Book a free 15-minute walkthrough. We'll show the system replying
+              to, qualifying, and booking your kind of enquiries, then map out
+              exactly what your setup would look like. No pitch deck.
             </p>
 
             <div className="mt-10 space-y-4">
               {[
-                [<MapPin size={16} key="m" />, "Remote, serving teams worldwide"],
+                [<MessageSquare size={16} key="w" />, "Free 15-minute walkthrough"],
                 [<Mail size={16} key="e" />, "tharitechptyltd@gmail.com"],
-                [<MessageSquare size={16} key="w" />, "Response within 2 business hours"],
+                [<MapPin size={16} key="m" />, "Reply within 2 business hours"],
               ].map(([icon, text], i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-card border border-white/15 text-accent-bright">
@@ -78,32 +78,32 @@ export function CTASection() {
                 <input id="name" name="name" className={inputCls} placeholder="Jane Okafor" required />
               </div>
               <div>
-                <label className={labelCls} htmlFor="company">Company</label>
-                <input id="company" name="company" className={inputCls} placeholder="Acme RevOps" />
+                <label className={labelCls} htmlFor="company">Business</label>
+                <input id="company" name="company" className={inputCls} placeholder="Sunrise Dental" />
               </div>
               <div className="sm:col-span-2">
-                <label className={labelCls} htmlFor="email">Work email</label>
-                <input id="email" name="email" type="email" className={inputCls} placeholder="jane@acme.com" required />
+                <label className={labelCls} htmlFor="email">Email</label>
+                <input id="email" name="email" type="email" className={inputCls} placeholder="you@business.co.za" required />
               </div>
               <div className="sm:col-span-2">
-                <label className={labelCls} htmlFor="stack">Current CRM / stack</label>
+                <label className={labelCls} htmlFor="stack">Where do most enquiries come in?</label>
                 <select id="stack" name="stack" className={`${inputCls} [&>option]:text-ink`} defaultValue="">
-                  <option value="" disabled>Select your CRM</option>
-                  <option>HubSpot</option>
-                  <option>Salesforce</option>
-                  <option>Pipedrive</option>
-                  <option>Spreadsheets / none</option>
-                  <option>Other</option>
+                  <option value="" disabled>Choose your main channel</option>
+                  <option>WhatsApp</option>
+                  <option>Website / forms</option>
+                  <option>Instagram / Facebook</option>
+                  <option>Phone calls</option>
+                  <option>A mix of channels</option>
                 </select>
               </div>
               <div className="sm:col-span-2">
-                <label className={labelCls} htmlFor="goal">What should the pipeline do autonomously?</label>
+                <label className={labelCls} htmlFor="goal">What do customers usually ask about?</label>
                 <textarea
                   id="goal"
                   name="goal"
                   rows={3}
                   className={`${inputCls} resize-none`}
-                  placeholder="e.g. enrich net-new leads overnight and push scored, meeting-ready deals into our CRM"
+                  placeholder="e.g. booking appointments, getting a quote, checking availability"
                 />
               </div>
             </div>
@@ -112,7 +112,7 @@ export function CTASection() {
               type="submit"
               className="mt-6 w-full rounded-pill bg-accent px-6 py-3.5 font-sans text-[0.95rem] font-semibold text-white transition-all duration-[260ms] ease-ease hover:-translate-y-0.5 hover:bg-accent-bright hover:shadow-accent"
             >
-              Request my audit
+              Book my free walkthrough
             </button>
             {sent && (
               <p className="mt-4 text-center text-[0.85rem] text-accent-bright">
