@@ -1,10 +1,16 @@
 interface LogoProps {
   size?: number;
+  /** Optional: render the wordmark next to the mark. Off by default. */
   withWordmark?: boolean;
 }
 
-/** Node-network mark: a hub linked to four satellites. */
-export function Logo({ size = 28, withWordmark = true }: LogoProps) {
+const BRAND_BLUE = "#2249C9";
+
+/**
+ * Thari Tech symbol — the angled "T" mark (two upward wings over a tapering
+ * stem). Symbol only by request; pass withWordmark to show the name.
+ */
+export function Logo({ size = 30, withWordmark = false }: LogoProps) {
   return (
     <span className="inline-flex items-center gap-2.5">
       <svg
@@ -12,24 +18,21 @@ export function Logo({ size = 28, withWordmark = true }: LogoProps) {
         height={size}
         viewBox="0 0 100 100"
         fill="none"
-        aria-hidden="true"
+        aria-label="Thari Tech"
+        role="img"
         className="shrink-0"
       >
-        <g stroke="#4F3CF0" strokeWidth="3" opacity="0.45">
-          <line x1="50" y1="50" x2="22" y2="26" />
-          <line x1="50" y1="50" x2="78" y2="26" />
-          <line x1="50" y1="50" x2="22" y2="74" />
-          <line x1="50" y1="50" x2="78" y2="74" />
-        </g>
-        <circle cx="22" cy="26" r="5" fill="#4F3CF0" />
-        <circle cx="78" cy="26" r="5" fill="#4F3CF0" />
-        <circle cx="22" cy="74" r="5" fill="#4F3CF0" />
-        <circle cx="78" cy="74" r="5" fill="#4F3CF0" />
-        <circle cx="50" cy="50" r="9" fill="#4F3CF0" />
+        {/* left wing */}
+        <path d="M8 47 L45 21 L45 35 L24 50 Z" fill={BRAND_BLUE} />
+        {/* right wing */}
+        <path d="M92 47 L55 21 L55 35 L76 50 Z" fill={BRAND_BLUE} />
+        {/* stem — split tapering blade */}
+        <path d="M44 25 L49 25 L49 80 L46.5 87 Z" fill={BRAND_BLUE} />
+        <path d="M51 25 L56 25 L53.5 87 L51 80 Z" fill={BRAND_BLUE} />
       </svg>
       {withWordmark && (
         <span className="font-display text-[1.15rem] font-semibold tracking-tight text-ink">
-          Thari<span className="text-accent">.</span>Tech
+          Thari Tech
         </span>
       )}
     </span>
